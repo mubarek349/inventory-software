@@ -3,7 +3,7 @@ import React from "react";
 import SearchInput from "@/components/dashboard/SearchInput";
 export default function Header() {
   return (
-    <div className="flex bg-gray-100 h-12 flex 
+    <div className="flex bg-gray-100 h-12 
     justify-between items-center px-8 border-b 
     border-slate-200 " >
        <div className="flex gap-3">

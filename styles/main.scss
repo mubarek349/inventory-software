@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-image{
+    background-image: url("https://res.cloudinary.com/diiq04gvo/image/upload/v1730273312/samples/landscapes/beach-boat.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}

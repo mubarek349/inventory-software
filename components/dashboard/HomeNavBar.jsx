@@ -1,5 +1,5 @@
 "use client"
-import { Building2, Search } from "lucide-react";
+import { Building2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -25,8 +25,7 @@ export default function HomeNavBar() {
          }
     ];
   return (
-
-    <div className="h-32 p-5 bg-green-400 border-b border-slate-300">
+    <div className="h-32 p-5  border-b-3 border-black-800">
         <div className="flex space-x-3 ">
             <div className="flex rounded-lg bg-white w-12 h-12 items-center  justify-center">
                <Building2/>
@@ -36,12 +35,13 @@ export default function HomeNavBar() {
                <span className="text-sm">Garat</span>
             </div>
         </div>
-        <nav className="sticky mt-6 space-x-4 flex">
-           {navLinks.map((item)=>{
+        <nav className=" mt-6 space-x-4 flex">
+           {navLinks.map((item,i)=>{
             return(
-                <Link  
+                <Link
+                    key={i}  
                     href={item.href}
-                    className={'${ pathname===item.href ? "py-1 border-b-2 border-blue-700":"py-1"}'} 
+                    className={`${ pathname===item.href ? "py-1 border-b-2 border-blue-700":"py-1"}`} 
                     >
                     {item.title}
                </Link>

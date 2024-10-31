@@ -2,9 +2,11 @@ import HomeNavBar from "@/components/dashboard/HomeNavBar";
 import React from "react";
 export default function Layout({children}){
     return(
-        <div className="bg-orange-500">
+        <div className="bg-black-800">
             <HomeNavBar/>
-            {children} 
+            <div>
+               {children} 
+            </div>
         </div>
     );
 }

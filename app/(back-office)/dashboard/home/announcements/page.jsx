@@ -3,7 +3,7 @@ export default function Announcements(){
     return(
         <div>
             <h2>
-            Announcements
+               Announcements
             </h2>
         </div>
     );
