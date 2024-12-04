@@ -48,7 +48,7 @@ export default function Header() {
               </button> 
               <button className="flex">
                   <img 
-                  src="/user.jpg"
+                  src="https://res.cloudinary.com/diiq04gvo/image/upload/v1730273494/all.jpg"
                   alt="user image" width={96}
                    height={96} className="rounded-full w-9 h-9 
                    border border-slate-900"

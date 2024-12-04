@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 export default function SalesActivityCard({item}) {
   return (
-    <Link href={item.href} className=" shadow rounded-lg border border border-slate-200
+    <Link href={item.href} className=" shadow rounded-lg border border-slate-200
     hover:border-blue-400 bg-white py-4 px-3 cursor-pointer 
     flex items-center flex-col gap-3 transition-all duration-300">
         <h4 className={`font-semibold text-4xl ${item.color}`}>{item.number}</h4>

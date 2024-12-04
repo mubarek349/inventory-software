@@ -2,7 +2,77 @@ import { BaggageClaim, BarChart4, ChevronLeft,ChevronRight,CloudCog,FolderClosed
 import React from "react";
 import Link from "next/link";
 import SubscriptionCard from "@/components/dashboard/SubscriptionCard";
+import SideBarDropDowmLink from "./SideBarDropDownLink";
+
 export default function SideBar() {
+    const inventoryLinks=[
+        {
+          title : "Items",
+          href : "/dashboard/inventory",
+        },
+        {
+            title : "Categories",
+            href : "/dashboard/inventory",
+        },
+        {
+            title : "Brands",
+            href : "/dashboard/inventory",
+        },
+        {
+            title : "Units",
+            href : "/dashboard/inventory",
+        },
+        {
+            title : "Warehouse",
+            href : "/dashboard/inventory",
+        },
+    
+        {
+          title : "Inventory Adjustment",
+          href : "/dashboard/inventory",
+
+        },
+    ];
+    const salesLinks=[
+        {
+          title : "Customers",
+          href : "#",
+        },
+        {
+            title : "Sales Orders",
+            href : "#",
+        },
+        {
+          title : "Packages",
+          href : "#",
+
+        },
+        {
+            title : "Shipments",
+            href : "#",
+        },
+        {
+        title : "invoices",
+        href : "#",
+        },
+        {
+            title : "Sales Receipts",
+            href : "#",
+        },
+        {
+            title : "Payments Receivid",
+            href : "#",
+        }, 
+        {
+            title : "Sales Returns",
+            href : "#",
+        }, 
+        {
+            title : "Credit Notes",
+            href : "#",
+        },
+    ];
+
   return (
            <div className="w-60 min-h-screen bg-slate-800
             text-slate-50 fixed">
@@ -20,38 +90,32 @@ export default function SideBar() {
                         <Link className="flex items-center 
                         space-x-2 bg-blue-600 text-slate-50
                         p-2 rounded-md" href="/dashboard/home">
-                            <Home  className="w-3 h-3"/>
+                            <Home  className="w-4 h-4"/>
                             <span>Home</span>
                         </Link>
-                        <button className="p-2 flex items-center 
-                        space-x-2" >
-                            <BaggageClaim  className="w-3 h-3"/>
-                            <span>Inventory</span>
-                            <ChevronRight className="w-2 h-2 m-2"/>
-                        </button>
-                        <button className="p-2 flex items-center 
-                        space-x-2" >
-                            <ShoppingCart  className="w-3 h-3"/>
-                            <span>Sales</span>
-                        </button>
-                        <button className="p-2 flex items-center 
-                        space-x-2" >
-                            <ShoppingBag  className="w-3 h-3"/>
-                            <span>Purchases</span>
+                        <SideBarDropDowmLink links={inventoryLinks} title="inventory" Icon={BaggageClaim} />
+                        <SideBarDropDowmLink links={salesLinks} title="Sales" Icon={ShoppingCart} />
+                        <button className="flex items-center justify-between w-full" >
+                            <div className="p-2 flex items-center 
+                        space-x-2">
+                                <ShoppingBag  className="w-4 h-4"/>
+                                <span>Purchases</span>
+                            </div>
+                            <ChevronRight className="w-4 h-4"/>
                         </button>
                         <Link className="p-2 flex items-center 
                         space-x-2" href="/dashboard/integrations">
-                            <CloudCog  className="w-3 h-3"/>
+                            <CloudCog  className="w-4 h-4"/>
                             <span>Integrations</span>
                         </Link>
                         <Link className="p-2 flex items-center 
                         space-x-2" href="/dashboard/reports">
-                            <BarChart4 className="w-3 h-3"/>
+                            <BarChart4 className="w-4 h-4"/>
                             <span>Reports</span>
                         </Link>
                         <Link className="p-2 flex items-center 
                         space-x-2" href="/dashboard/documents">
-                            <FolderClosed  className="w-3 h-3"/>
+                            <FolderClosed  className="w-4 h-4"/>
                             <span>Documents</span>
                         </Link>
                      </nav>

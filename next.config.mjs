@@ -6,6 +6,10 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'console.cloudinary.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'utfs.io',
+            },
         ],
    },
 };
